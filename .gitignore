@@ -1,0 +1,18 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.idea/
+*.swp
+*.swo
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build
+dist/
+build/
+*.zip

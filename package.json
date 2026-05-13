@@ -1,0 +1,18 @@
+{
+  "name": "bcn-encuentro-prenupcial",
+  "version": "1.0.0",
+  "description": "Dossier de negocio BCN Encuentro Prenupcial — Diseño mediterráneo luxury 2025",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=5500 --open=index.html",
+    "dev": "npx live-server --port=5500",
+    "format": "npx prettier --write \"**/*.{html,css,js}\""
+  },
+  "keywords": ["encuentro", "prenupcial", "nupcial", "dossier", "barcelona"],
+  "author": "BCN Encuentro Prenupcial",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.0"
+  }
+}
