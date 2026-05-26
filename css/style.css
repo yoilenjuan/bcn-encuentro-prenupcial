@@ -1686,3 +1686,164 @@ body {
 /* ═══════════════════════════════════════════════════════════════
    END V6 EXTENSION — Phase 02A
    ═══════════════════════════════════════════════════════════════ */
+
+
+/* ═══════════════════════════════════════════════════════════════
+   §08 CONTACT EXTENSION — Phase 06
+   Namespace: eq-contact-* / eq-ci-*
+   ═══════════════════════════════════════════════════════════════ */
+
+.eq-contact-ext {
+  max-width: 1020px;
+  margin: 96px auto 0;
+  padding: 0 48px 80px;
+}
+
+.eq-contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  background: linear-gradient(135deg, #F9F3E8 0%, #F2E8D0 60%, #EDE0C6 100%);
+  padding: 72px 64px;
+  position: relative;
+}
+
+/* Subtle gold accent line on left edge */
+.eq-contact-inner::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(168,128,72,0.45), transparent);
+}
+
+/* —— LEFT: editorial phrase —— */
+
+.eq-contact-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: #A07840;
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+.eq-contact-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 300;
+  line-height: 1.12;
+  color: #1A1208;
+  margin: 0 0 32px;
+  letter-spacing: -0.01em;
+}
+
+.eq-contact-heading em {
+  font-style: italic;
+  color: #A07840;
+}
+
+.eq-contact-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: rgba(26,18,8,0.58);
+  font-weight: 400;
+  max-width: 340px;
+}
+
+/* —— RIGHT: contact information —— */
+
+.eq-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-top: 8px;
+}
+
+.eq-ci-block {
+  border-top: 1px solid rgba(168,128,72,0.22);
+  padding-top: 20px;
+}
+
+.eq-ci-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #A07840;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.eq-ci-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #1A1208;
+  line-height: 1.45;
+  display: block;
+}
+
+.eq-ci-value-muted {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(26,18,8,0.50);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.eq-ci-link {
+  text-decoration: none;
+  color: #1A1208;
+  transition: color 0.25s ease;
+}
+
+.eq-ci-link:hover {
+  color: #A07840;
+}
+
+/* thin gold rule below the panel */
+.eq-contact-rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(168,128,72,0.30), transparent);
+  margin-top: 56px;
+}
+
+/* —— RESPONSIVE —— */
+
+@media (max-width: 900px) {
+  .eq-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 52px 44px;
+  }
+  .eq-contact-sub {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .eq-contact-ext {
+    padding: 0 24px 56px;
+  }
+  .eq-contact-inner {
+    padding: 44px 32px;
+    gap: 40px;
+  }
+  .eq-contact-heading {
+    font-size: clamp(32px, 8vw, 44px);
+  }
+  .eq-ci-value {
+    font-size: 18px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   END §08 CONTACT EXTENSION — Phase 06
+   ═══════════════════════════════════════════════════════════════ */
