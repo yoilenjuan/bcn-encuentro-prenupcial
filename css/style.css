@@ -708,6 +708,18 @@ h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
 .tl-si::before { content: '→ '; color: var(--gold); }
 
 /* ════════════════════════════════ TEAM ════ */
+/* Default 3-col layout for §08 (overrides 5-col base) */
+#equipo .team-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Team section inner container — responsive wrapper */
+.team-inner-wrap {
+  max-width: 1020px;
+  margin: 44px auto 0;
+  padding: 0 48px;
+}
+
 .team-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
@@ -814,11 +826,11 @@ h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
 .vs-table td {
   padding: 11px 14px;
   border-bottom: 1px solid rgba(250,246,238,0.04);
-  color: rgba(250,246,238,0.45); vertical-align: middle;
+  color: rgba(250,246,238,0.65); vertical-align: middle;
 }
 .vs-table td:last-child { color: var(--gold2); font-weight: 400; }
 .chk { color: var(--sage); }
-.xmk { color: rgba(250,246,238,0.16); }
+.xmk { color: rgba(230,110,90,0.70); }
 .pos-pillars {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -872,7 +884,7 @@ h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
 }
 .cl-text {
   font-size: 14px;
-  color: rgba(250,246,238,0.48);
+  color: rgba(250,246,238,0.68);
   line-height: 1.85; margin-bottom: 44px;
 }
 .cl-contact {
@@ -909,8 +921,10 @@ h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
   .prob-grid, .acts-grid { grid-template-columns: 1fr 1fr; }
   .team-grid { grid-template-columns: 1fr 1fr; }
   .prov-grid { grid-template-columns: repeat(3, 1fr); }
-  .kpi-strip, .conv-strip { grid-template-columns: repeat(2, 1fr); }
+  .kpi-strip { grid-template-columns: repeat(3, 1fr); }
+  .conv-strip { grid-template-columns: repeat(2, 1fr); }
   .idx-grid { grid-template-columns: 1fr; }
+  .team-inner-wrap { padding: 0 28px; }
   .cover-h1 { font-size: clamp(52px, 10vw, 82px); }
   .cover-tag { font-size: 18px; max-width: 580px; }
 }
@@ -931,6 +945,11 @@ h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
   .prov-grid { grid-template-columns: repeat(2, 1fr); }
   .kpi-strip { grid-template-columns: repeat(2, 1fr); }
   .conv-strip { grid-template-columns: 1fr 1fr; }
+  .exec-stats { grid-template-columns: 1fr 1fr; }
+  .aforo-rows { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .team-inner-wrap { padding: 0 20px; }
+  .act-card { height: 340px; }
 }
 
 
@@ -1847,3 +1866,19 @@ body {
 /* ═══════════════════════════════════════════════════════════════
    END §08 CONTACT EXTENSION — Phase 06
    ═══════════════════════════════════════════════════════════════ */
+/* ════════════════════════════════ WRAPPER HELPERS ════ */
+/* Responsive inner containers used inside dark/mid sections */
+.acts-inner-wrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 900px) {
+  .acts-inner-wrap { padding: 0 28px; }
+  .team-inner-wrap { padding: 0 28px; }
+}
+@media (max-width: 600px) {
+  .acts-inner-wrap { padding: 0 20px; }
+  .team-inner-wrap { padding: 0 20px; }
+}
