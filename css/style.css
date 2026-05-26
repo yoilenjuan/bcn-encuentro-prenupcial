@@ -1359,7 +1359,7 @@ body {
 
 /* ── Closing section overlay — warm and soft ── */
 .closing-bg::after {
-  background: rgba(13,20,34,0.72);  /* V6 03: reduced from 0.83 — lighter editorial ending */
+  background: rgba(13,20,34,0.48);  /* V6 04: reduced to 0.48 — brighter editorial ending */
 }
 
 /* ── Timeline accent warmth ── */
