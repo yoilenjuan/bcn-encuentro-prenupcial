@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BCN Encuentro Prenupcial — Dossier de Negocio 2025. La experiencia que convierte la planificación en celebración.">
-<title>BCN Encuentro Prenupcial — Dossier 2025</title>
+<meta name="description" content="BCN Encuentro Prenupcial — Dossier de Negocio 2026. La experiencia que convierte la planificación en celebración.">
+<title>BCN Encuentro Prenupcial — Dossier 2026</title>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="css/style.css">
@@ -21,28 +21,43 @@
 .fade-in-delay-1 { transition-delay: 0.1s; }
 .fade-in-delay-2 { transition-delay: 0.2s; }
 .fade-in-delay-3 { transition-delay: 0.3s; }
+
+/* Cover entry animations */
+.cv-enter { opacity: 0; transform: translateY(18px); animation: cvFadeUp 1.1s cubic-bezier(0.22,1,0.36,1) forwards; }
+.cv-enter-1 { animation-delay: 0.25s; }
+.cv-enter-2 { animation-delay: 0.5s; }
+.cv-enter-3 { animation-delay: 0.75s; }
+.cv-enter-4 { animation-delay: 1.0s; }
+@keyframes cvFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
 </style>
 </head>
 <body>
 
 <!-- ════════════ FLOATING NAV ════ -->
 <nav id="fnav" class="fnav" aria-label="Navegación principal">
-  <div class="fnav-brand">BCN Encuentro Prenupcial</div>
+  <div class="fnav-brand">
+    <svg class="fnav-logo" width="46" height="24" viewBox="0 0 92 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="28" cy="24" r="20" stroke="#C9A870" stroke-width="2.2"/>
+      <circle cx="28" cy="24" r="13" stroke="#C9A870" stroke-width="0.7" opacity="0.32"/>
+      <circle cx="64" cy="24" r="20" stroke="#C9A870" stroke-width="2.2"/>
+      <circle cx="64" cy="24" r="13" stroke="#C9A870" stroke-width="0.7" opacity="0.32"/>
+    </svg>
+    <span class="fnav-brand-name">Encuentro Prenupcial</span>
+  </div>
   <ul class="fnav-links">
-    <li><a href="#resumen">Resumen</a></li>
-    <li><a href="#justificacion">Contexto</a></li>
-    <li><a href="#propuesta">Propuesta</a></li>
-    <li><a href="#experiencia">Experiencia</a></li>
-    <li><a href="#proveedores">Partners</a></li>
-    <li><a href="#financiero">Financiero</a></li>
-    <li><a href="#equipo">Equipo</a></li>
-    <li><a href="#posicionamiento">Estrategia</a></li>
+    <li><a href="#experiencia">Experiencias</a></li>
+    <li><a href="#contacto">Contacto</a></li>
   </ul>
 </nav>
 
 <!-- ════════════ PORTADA ════ -->
 <section class="cover" id="portada">
   <div class="cover-photo"></div>
+  <div class="cover-overlay"></div>
+  <div class="cover-overlay-radial"></div>
+  <div class="cover-overlay-bottom"></div>
   <div class="cover-frame"></div>
   <div class="cv-corner tl"></div>
   <div class="cv-corner tr"></div>
@@ -50,33 +65,30 @@
   <div class="cv-corner br"></div>
 
   <div class="cover-main">
-    <div class="cover-over">Dossier de Negocio &nbsp;·&nbsp; 2025</div>
 
-    <!-- Luxury Logo -->
-    <div class="logo-wrap">
-      <svg width="120" height="72" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="BCN Encuentro Prenupcial logo">
-        <path d="M20 68 L20 36 Q20 8 60 8 Q100 8 100 36 L100 68" stroke="rgba(201,162,96,0.8)" stroke-width="1.5" fill="none"/>
-        <path d="M28 68 L28 38 Q28 18 60 18 Q92 18 92 38 L92 68" stroke="rgba(201,162,96,0.3)" stroke-width="0.7" fill="none"/>
-        <polygon points="60,2 64,10 60,14 56,10" fill="rgba(201,162,96,0.7)"/>
-        <line x1="12" y1="68" x2="108" y2="68" stroke="rgba(201,162,96,0.5)" stroke-width="1"/>
-        <text x="60" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="300" fill="rgba(250,246,238,0.9)" letter-spacing="4">BCN</text>
-        <line x1="12" y1="44" x2="20" y2="44" stroke="rgba(201,162,96,0.45)" stroke-width="0.8"/>
-        <line x1="100" y1="44" x2="108" y2="44" stroke="rgba(201,162,96,0.45)" stroke-width="0.8"/>
-        <circle cx="12" cy="44" r="2" fill="rgba(201,162,96,0.45)"/>
-        <circle cx="108" cy="44" r="2" fill="rgba(201,162,96,0.45)"/>
+    <!-- Logo -->
+    <div class="logo-wrap cv-enter cv-enter-1">
+      <svg width="92" height="48" viewBox="0 0 92 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="BCN Encuentro Prenupcial logo">
+        <circle cx="28" cy="24" r="20" stroke="#C9A870" stroke-width="2.2"/>
+        <circle cx="28" cy="24" r="13" stroke="#C9A870" stroke-width="0.7" opacity="0.32"/>
+        <circle cx="64" cy="24" r="20" stroke="#C9A870" stroke-width="2.2"/>
+        <circle cx="64" cy="24" r="13" stroke="#C9A870" stroke-width="0.7" opacity="0.32"/>
       </svg>
-      <div class="logo-name">Encuentro Prenupcial</div>
     </div>
 
-    <h1 class="cover-h1">Encuentro<em>Prenupcial</em></h1>
-    <p class="cover-tag">La experiencia que convierte la planificación en celebración</p>
-    <a href="#resumen" class="cover-pill">Celebra también la antesala</a>
+    <!-- Top Label -->
+    <div class="cover-over cv-enter cv-enter-2">BCN DOSSIER 2026</div>
+
+    <!-- Main Title -->
+    <h1 class="cover-h1 cv-enter cv-enter-3">Encuentro<em>Prenupcial</em></h1>
+
+    <!-- Subtitle -->
+    <p class="cover-tag cv-enter cv-enter-4">La experiencia que convierte la planificación en celebración</p>
+
   </div>
 
   <div class="cover-foot">
-    <span class="cv-fi">Dossier Profesional · 2025</span>
-    <span class="cv-fi">BCN Encuentro Prenupcial &nbsp;·&nbsp; Producción de Experiencias Nupciales</span>
-    <span class="cv-fi">Documento Confidencial</span>
+    <span class="cv-fi">BARCELONA 2026 &nbsp;·&nbsp; DOCUMENTO CONFIDENCIAL</span>
   </div>
 </section>
 <div class="band"></div>
@@ -86,10 +98,10 @@
   <div class="inner">
     <div class="eyebrow terra fade-in">Contenido</div>
     <h2 class="sec-title fade-in fade-in-delay-1">Índice del <em>Dossier</em></h2>
-    <p class="body-md fade-in fade-in-delay-2">Dirigido a propietarios de recintos de bodas, socios inversores y proveedores del sector nupcial que deseen conocer, evaluar y sumarse al proyecto.</p>
+    <p class="body-md fade-in fade-in-delay-2">Una visión general del proyecto, diseñada para propietarios de recintos, espacios para celebraciones e inversores interesados en conocer el concepto, la experiencia y el potencial de Encuentro Prenupcial.</p>
     <div class="idx-grid">
       <a href="#resumen"        class="idx-item fade-in"><div class="idx-num">01</div><div><div class="idx-label">Síntesis</div><div class="idx-name">Resumen Ejecutivo</div></div></a>
-      <a href="#justificacion"  class="idx-item fade-in fade-in-delay-1"><div class="idx-num">02</div><div><div class="idx-label">Contexto</div><div class="idx-name">Justificación y Problema</div></div></a>
+      <a href="#just"  class="idx-item fade-in fade-in-delay-1"><div class="idx-num">02</div><div><div class="idx-label">Contexto</div><div class="idx-name">Justificación y Problema</div></div></a>
       <a href="#propuesta"      class="idx-item fade-in"><div class="idx-num">03</div><div><div class="idx-label">El concepto</div><div class="idx-name">Propuesta Concreta y Aforo</div></div></a>
       <a href="#experiencia"    class="idx-item fade-in fade-in-delay-1"><div class="idx-num">04</div><div><div class="idx-label">El evento</div><div class="idx-name">La Experiencia en 6 Actos</div></div></a>
       <a href="#proveedores"    class="idx-item fade-in"><div class="idx-num">05</div><div><div class="idx-label">Partners</div><div class="idx-name">16 Proveedores por Categoría</div></div></a>
@@ -105,25 +117,16 @@
 
 <!-- ════════════ §01 RESUMEN ════ -->
 <section class="sec-dark" id="resumen">
-  <!-- Logo watermark -->
-  <div class="logo-wm" aria-hidden="true">
-    <svg width="64" height="40" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 68 L20 36 Q20 8 60 8 Q100 8 100 36 L100 68" stroke="rgba(201,162,96,0.3)" stroke-width="1.5" fill="none"/>
-      <polygon points="60,2 64,10 60,14 56,10" fill="rgba(201,162,96,0.25)"/>
-      <line x1="12" y1="68" x2="108" y2="68" stroke="rgba(201,162,96,0.25)" stroke-width="1"/>
-      <text x="60" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="300" fill="rgba(250,246,238,0.3)" letter-spacing="4">BCN</text>
-    </svg>
-  </div>
+  <div class="wm wm-resumen">EP</div>
   <div class="inner">
     <div class="exec-grid">
       <div>
         <div class="eyebrow lt fade-in">01 — Resumen Ejecutivo</div>
         <h2 class="sec-title lt fade-in fade-in-delay-1">¿Para quién es este dossier<br>y para qué <em>sirve?</em></h2>
-        <p class="body-md fade-in fade-in-delay-2" style="color:rgba(250,246,238,0.58);">Este documento está dirigido a <strong style="color:var(--gold2);">propietarios y directores de recintos de bodas</strong> que buscan diferenciarse con una propuesta de valor real, y a <strong style="color:var(--gold2);">socios o inversores</strong> interesados en un modelo escalable dentro del sector nupcial español.</p>
+        <p class="body-md fade-in fade-in-delay-2" style="color:rgba(44,34,24,0.72);">Este documento está dirigido a <strong style="color:var(--gold3);">propietarios y directores de recintos de bodas</strong> que buscan diferenciarse con una propuesta de valor real, y a <strong style="color:var(--gold3);">socios o inversores</strong> interesados en un modelo escalable dentro del sector nupcial español.</p>
         <blockquote class="exec-quote fade-in fade-in-delay-1">
           "Encuentro Prenupcial transforma un momento de gestión en una celebración anticipada. No vende servicios: vende la ilusión de la boda antes de que llegue."
         </blockquote>
-        <p class="body-md fade-in" style="color:rgba(250,246,238,0.48);">Su objetivo es presentar la propuesta completa — concepto, operativa, estructura financiera y equipo — para facilitar la toma de decisión de incorporar el formato al calendario del recinto.</p>
         <div class="exec-tags fade-in fade-in-delay-1">
           <span class="exec-tag">Sector nupcial</span>
           <span class="exec-tag">Experiencia B2B2C</span>
@@ -133,18 +136,18 @@
         </div>
       </div>
       <div class="fade-in fade-in-delay-2">
-        <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(250,246,238,0.35);margin-bottom:16px;font-weight:400;">El proyecto en números</div>
+        <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#A07840;margin-bottom:16px;font-weight:500;">El proyecto en números</div>
         <div class="exec-stats">
-          <div class="e-stat"><div class="e-sv">10</div><div class="e-sl">Parejas / edición</div></div>
-          <div class="e-stat"><div class="e-sv">~60</div><div class="e-sl">Asistentes totales</div></div>
-          <div class="e-stat"><div class="e-sv">16</div><div class="e-sl">Partners</div></div>
+          <div class="e-stat"><div class="e-sv">10 o +</div><div class="e-sl">Parejas / edición</div></div>
+          <div class="e-stat"><div class="e-sv">200 o +</div><div class="e-sl">Asistentes totales</div></div>
+          <div class="e-stat"><div class="e-sv">16 o +</div><div class="e-sl">Partners</div></div>
           <div class="e-stat"><div class="e-sv">4</div><div class="e-sl">Ediciones / año</div></div>
           <div class="e-stat"><div class="e-sv">52%</div><div class="e-sl">Margen estimado</div></div>
           <div class="e-stat"><div class="e-sv">2ª</div><div class="e-sl">Edic. equilibrio</div></div>
         </div>
-        <div style="margin-top:28px;padding:24px;background:rgba(201,162,96,0.07);border-left:2px solid var(--gold);">
-          <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:400;">Propósito único</div>
-          <p style="font-size:13px;color:rgba(250,246,238,0.56);line-height:1.75;">Reunir en un solo día, dentro del propio recinto, a 10 parejas de novios con sus familias para que vivan, decidan y celebren los distintos aspectos de su boda en un entorno exclusivo, bien producido y emocionalmente memorable.</p>
+        <div style="margin-top:28px;padding:24px;background:rgba(255,255,255,0.55);border-left:3px solid #A07840;">
+          <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#A07840;margin-bottom:10px;font-weight:500;">Propósito único</div>
+          <p style="font-size:13px;color:rgba(44,34,24,0.72);line-height:1.75;">Reunir en un solo día, dentro del propio recinto, a 10 parejas de novios con sus familias para que vivan, decidan y celebren los distintos aspectos de su boda en un entorno exclusivo, bien producido y emocionalmente memorable.</p>
         </div>
       </div>
     </div>
@@ -152,32 +155,75 @@
 </section>
 <div class="band"></div>
 
-<!-- ════════════ §02 JUSTIFICACIÓN ════ -->
-<section class="wrap" id="justificacion">
-  <div class="eyebrow fade-in">02 — Justificación y Problema</div>
-  <h2 class="sec-title fade-in fade-in-delay-1">¿Qué problema <em>resolvemos?</em></h2>
-  <p class="body-md fade-in fade-in-delay-2">El sector nupcial está fragmentado, impersonal y desgastante. La planificación de una boda exige meses de gestión dispersa. BCN Encuentro Prenupcial existe para cambiar eso.</p>
-  <div class="prob-grid">
-    <div class="prob-card fade-in">
-      <div class="prob-icon g">💍</div>
-      <div class="prob-title">El problema de los novios</div>
-      <p class="prob-text">Una pareja media visita entre 12 y 18 proveedores distintos antes de cerrar su boda. Cada visita implica desplazamiento, negociación y desgaste emocional. La ilusión se convierte en estrés.</p>
-    </div>
-    <div class="prob-card fade-in fade-in-delay-1">
-      <div class="prob-icon t">🏛️</div>
-      <div class="prob-title">El problema del recinto</div>
-      <p class="prob-text">Los recintos compiten casi exclusivamente por precio y capacidad. Pocos ofrecen experiencias que fidelicen antes de la firma o que generen diferenciación emocional real frente a la competencia.</p>
-    </div>
-    <div class="prob-card fade-in fade-in-delay-2">
-      <div class="prob-icon s">🛍️</div>
-      <div class="prob-title">El problema del proveedor</div>
-      <p class="prob-text">Los proveedores nupciales participan en ferias masificadas compitiendo con decenas de similares. El contacto con el cliente es breve e impersonal, y la tasa de conversión raramente supera el 10%.</p>
-    </div>
-  </div>
-  <div style="margin-top:48px;padding:40px;background:var(--ivory2);border-left:4px solid var(--gold);" class="fade-in">
-    <div class="eyebrow">La oportunidad de mercado</div>
-    <p class="body-lg">El sector nupcial en España mueve más de <strong style="color:var(--gold3);">2.400 millones de euros anuales</strong>. Se celebran más de 170.000 bodas al año. Y sin embargo, no existe ningún formato privado, producido y emocional que reúna todos los elementos de la boda en un solo encuentro dentro del propio recinto.</p>
-  </div>
+<!-- ════════════ §02 JUSTIFICACIÓN — V6 ════ -->
+<section id="just" class="just fade-in">
+
+  <!-- WATERMARK -->
+  <div class="wm">BCN</div>
+
+  <!-- GRID CONTAINER -->
+  <div class="just-in">
+
+    <!-- ── LEFT COLUMN ── -->
+    <div class="just-left">
+
+      <span class="ey d">02 — Justificación y Problema</span>
+
+      <h2 class="TT c">¿Qué problema <em>resolvemos</em>?</h2>
+
+      <p class="b1">
+        El sector nupcial en España mueve más de 2.400 millones de euros al año,
+        pero está profundamente fragmentado. Los novios dedican meses a coordinar
+        decenas de proveedores sin criterio curatorial, mientras los recintos y
+        vendors compiten en precio porque no existe un espacio de encuentro
+        premium que alinee oferta y demanda con intención real de compra.
+      </p>
+
+      <div class="mkt">
+        <p>
+          El mercado nupcial español genera <strong>2.400 millones de euros</strong>
+          anualmente. BCN Encuentro Prenupcial se posiciona como el primer evento
+          B2B2C premium que conecta recintos, proveedores y parejas con intención
+          real de contratación.
+        </p>
+      </div>
+
+    </div><!-- /just-left -->
+
+    <!-- ── RIGHT COLUMN — 3 PROBLEM CARDS ── -->
+    <div class="just-right">
+
+      <div class="pc">
+        <div class="pc-ic">📅</div>
+        <div class="pc-tt">Los novios</div>
+        <div class="pc-tx">
+          Visitan entre 12 y 18 proveedores distintos antes de tomar una decisión,
+          invirtiendo meses sin un espacio curado de referencia.
+        </div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-ic">🏛️</div>
+        <div class="pc-tt">Los recintos</div>
+        <div class="pc-tx">
+          Compiten únicamente en precio porque no disponen de un canal premium
+          donde mostrar su propuesta de valor diferencial.
+        </div>
+      </div>
+
+      <div class="pc">
+        <div class="pc-ic">🛍</div>
+        <div class="pc-tt">Los proveedores</div>
+        <div class="pc-tx">
+          Participan en ferias masivas con baja conversión y sin acceso a
+          compradores con intención real de contratación.
+        </div>
+      </div>
+
+    </div><!-- /just-right -->
+
+  </div><!-- /just-in -->
+
 </section>
 <div class="band"></div>
 
@@ -190,19 +236,24 @@
   </div>
   <div class="aforo-block fade-in">
     <div>
-      <div class="aforo-num">~60</div>
+      <div class="aforo-num">150–200</div>
       <div class="aforo-unit">Asistentes por edición</div>
     </div>
     <div>
       <div style="color:rgba(250,246,238,0.38);font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;font-weight:400;">Composición del aforo estimado</div>
       <div class="aforo-rows">
-        <div class="a-row"><div class="a-rv">10 × 2</div><div class="a-rl">Los novios (20 personas)</div></div>
-        <div class="a-row"><div class="a-rv">10 × 2</div><div class="a-rl">Padres de cada pareja (20)</div></div>
-        <div class="a-row"><div class="a-rv">~10</div><div class="a-rl">Padrinos y testigos</div></div>
-        <div class="a-row"><div class="a-rv">~10</div><div class="a-rl">Hermanos y familiares</div></div>
+        <div class="a-row"><div class="a-rv">10 o +</div><div class="a-rl">Parejas de novios</div></div>
+        <div class="a-row"><div class="a-rv">10 × 2</div><div class="a-rl">Madrina y Padrino</div></div>
+        <div class="a-row"><div class="a-rv">20 × 2</div><div class="a-rl">Hermanos</div></div>
+        <div class="a-row"><div class="a-rv">2 + 2</div><div class="a-rl">Yernos / nueras</div></div>
+        <div class="a-row"><div class="a-rv">2</div><div class="a-rl">Tíos</div></div>
+        <div class="a-row"><div class="a-rv">4</div><div class="a-rl">Sobrinos</div></div>
+        <div class="a-row"><div class="a-rv">4</div><div class="a-rl">Primos</div></div>
+        <div class="a-row"><div class="a-rv">2</div><div class="a-rl">Abuelos</div></div>
+        <div class="a-row"><div class="a-rv">2</div><div class="a-rl">Damas de honor</div></div>
       </div>
       <div style="margin-top:14px;padding:14px;background:rgba(201,162,96,0.06);font-size:11px;color:rgba(250,246,238,0.42);line-height:1.65;">
-        ✦ Aforo máximo recomendado: 80 personas. Por encima de este umbral el evento pierde su carácter exclusivo.
+        ❖ El aforo será según la capacidad del recinto.
       </div>
     </div>
   </div>
@@ -213,113 +264,283 @@
 <!-- ════════════ §04 EXPERIENCIA ════ -->
 <section class="sec-mid" id="experiencia">
   <div class="inner">
-    <!-- Logo watermark -->
-    <div class="logo-wm" aria-hidden="true">
-      <svg width="64" height="40" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 68 L20 36 Q20 8 60 8 Q100 8 100 36 L100 68" stroke="rgba(201,162,96,0.25)" stroke-width="1.5" fill="none"/>
-        <polygon points="60,2 64,10 60,14 56,10" fill="rgba(201,162,96,0.22)"/>
-        <line x1="12" y1="68" x2="108" y2="68" stroke="rgba(201,162,96,0.22)" stroke-width="1"/>
-        <text x="60" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="300" fill="rgba(250,246,238,0.28)" letter-spacing="4">BCN</text>
-      </svg>
-    </div>
     <div class="eyebrow lt fade-in">04 — La Experiencia</div>
     <h2 class="sec-title lt fade-in fade-in-delay-1">El evento en <em>6 actos</em></h2>
-    <p class="body-md fade-in fade-in-delay-2" style="color:rgba(250,246,238,0.5);max-width:620px;">Cada momento ha sido diseñado con intención. El ritmo lo marca el Maestro de Ceremonias, que acompaña a los asistentes de principio a fin.</p>
+    <p class="body-md fade-in fade-in-delay-2" style="color:rgba(250,246,238,0.58);max-width:640px;">Cada momento ha sido diseñado para guiar, inspirar y acompañar a los invitados durante toda la experiencia. Desde la bienvenida hasta el cierre del evento, un Maestro de Ceremonias conduce cada acto con atención, ritmo y cercanía para garantizar una experiencia premium y memorable.</p>
   </div>
-  <div style="max-width:1020px;margin:36px auto 0;padding:0 48px;">
+  <div class="acts-inner-wrap">
     <div class="acts-grid">
-      <div class="act-card fade-in">
-        <div class="act-photo" style="background-image:url('https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=800&q=80');"></div>
-        <div class="act-overlay"></div>
-        <div class="act-body">
-          <div class="act-num">Acto I · 11:00 h</div>
-          <div class="act-title">Recepción de bienvenida</div>
-          <div class="act-desc">Llegada con cóctel de bienvenida, ambientación musical en directo y primer contacto con el espacio en su versión más especial.</div>
+      <div class="act-wrap fade-in">
+        <div class="act-card">
+          <div class="act-photo" style="background-image:url('assets/images/acto1.png');"></div>
+          <div class="act-overlay"></div>
+          <div class="act-body">
+            <div class="act-title">Recepción de bienvenida</div>
+            <div class="act-desc">Llegada con cóctel de bienvenida, ambientación musical en directo y primer contacto con el espacio en su versión más especial.</div>
+          </div>
         </div>
+        <div class="act-ext-label">Acto I &nbsp;·&nbsp; 15:00 h</div>
       </div>
-      <div class="act-card fade-in fade-in-delay-1">
-        <div class="act-photo" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&q=80');"></div>
-        <div class="act-overlay"></div>
-        <div class="act-body">
-          <div class="act-num">Acto II · 11:30 h</div>
-          <div class="act-title">Recorrido por stands</div>
-          <div class="act-desc">Visita a 16 proveedores seleccionados, uno por categoría. Asesoramiento directo, muestras y ventajas exclusivas para quienes contraten ese día.</div>
+      <div class="act-wrap fade-in fade-in-delay-1">
+        <div class="act-card">
+          <div class="act-photo" style="background-image:url('assets/images/acto2.png');"></div>
+          <div class="act-overlay"></div>
+          <div class="act-body">
+            <div class="act-title">Recorrido por los stands</div>
+            <div class="act-desc">Visita a 16 proveedores seleccionados, uno por categoría. Asesoramiento directo, muestras y ventajas exclusivas para quienes contraten ese día.</div>
+          </div>
         </div>
+        <div class="act-ext-label">Acto II &nbsp;·&nbsp; 15:30 h</div>
       </div>
-      <div class="act-card fade-in fade-in-delay-2">
-        <div class="act-photo" style="background-image:url('https://images.unsplash.com/photo-1594552072238-b8a33785b6cd?w=800&q=80');"></div>
-        <div class="act-overlay"></div>
-        <div class="act-body">
-          <div class="act-num">Acto III · 13:00 h</div>
-          <div class="act-title">Showroom & Desfile privado</div>
-          <div class="act-desc">10 modelos femeninas, 2 masculinos, modelos infantiles. Más de 20 vestidos de novia, trajes, damas de honor y moda infantil en un show aspiracional.</div>
+      <div class="act-wrap fade-in fade-in-delay-2">
+        <div class="act-card">
+          <div class="act-photo" style="background-image:url('assets/images/acto3.png');"></div>
+          <div class="act-overlay"></div>
+          <div class="act-body">
+            <div class="act-title">Asesoramiento &amp; Contrataciones</div>
+            <div class="act-desc">Tiempo de interacción directa con proveedores. El equipo facilita reuniones, resuelve dudas y acompaña las decisiones de compra.</div>
+          </div>
         </div>
+        <div class="act-ext-label">Acto III &nbsp;·&nbsp; 17:00 h</div>
       </div>
-      <div class="act-card fade-in">
-        <div class="act-photo" style="background-image:url('https://images.unsplash.com/photo-1529636798458-92182e662485?w=800&q=80');"></div>
-        <div class="act-overlay"></div>
-        <div class="act-body">
-          <div class="act-num">Acto IV · 14:00 h</div>
-          <div class="act-title">Asesoramiento & Contratación</div>
-          <div class="act-desc">Tiempo de interacción directa con proveedores. El equipo facilita reuniones, resuelve dudas y acompaña las decisiones de compra.</div>
+      <div class="act-wrap fade-in">
+        <div class="act-card">
+          <div class="act-photo" style="background-image:url('assets/images/acto4.png');"></div>
+          <div class="act-overlay"></div>
+          <div class="act-body">
+            <div class="act-title">Showroom &amp; Desfile privado</div>
+            <div class="act-desc">12 modelos femeninas, 4 masculinos, 4 niños. Más de 20 vestidos de novia, trajes, damas de honor y moda infantil en un show aspiracional.</div>
+          </div>
         </div>
+        <div class="act-ext-label">Acto IV &nbsp;·&nbsp; 19:00 h</div>
       </div>
-      <div class="act-card fade-in fade-in-delay-1">
-        <div class="act-photo" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80');"></div>
-        <div class="act-overlay"></div>
-        <div class="act-body">
-          <div class="act-num">Acto V · 15:00 h</div>
-          <div class="act-title">Degustación del menú</div>
-          <div class="act-desc">El recinto presenta su propuesta gastronómica: menú de boda real, vinos, cócteles de autor y mesa dulce.</div>
+      <div class="act-wrap fade-in fade-in-delay-1">
+        <div class="act-card">
+          <div class="act-photo" style="background-image:url('assets/images/acto5.png');"></div>
+          <div class="act-overlay"></div>
+          <div class="act-body">
+            <div class="act-title">Degustación del menú</div>
+            <div class="act-desc">El recinto presenta su propuesta gastronómica: menú de boda real, vinos, cócteles de autor, mesa dulce y tarta nupcial.</div>
+          </div>
         </div>
+        <div class="act-ext-label">Acto V &nbsp;·&nbsp; 20:00 h</div>
       </div>
-      <div class="act-card fade-in fade-in-delay-2">
-        <div class="act-photo" style="background-image:url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80');"></div>
-        <div class="act-overlay"></div>
-        <div class="act-body">
-          <div class="act-num">Acto VI · 17:00 h</div>
-          <div class="act-title">Cierre musical & Baile</div>
-          <div class="act-desc">Grupo musical en directo. Cierre emocional que convierte la planificación en una primera fiesta. Los novios se van con ilusión, no con pendientes.</div>
+      <div class="act-wrap fade-in fade-in-delay-2">
+        <div class="act-card">
+          <div class="act-photo" style="background-image:url('assets/images/acto6.png');"></div>
+          <div class="act-overlay"></div>
+          <div class="act-body">
+            <div class="act-title">Cierre musical &amp; Baile</div>
+            <div class="act-desc">Grupo musical en directo. Cierre emocional que convierte la planificación en una primera fiesta. Los novios se van con ilusión, no con pendientes.</div>
+          </div>
         </div>
+        <div class="act-ext-label">Acto VI &nbsp;·&nbsp; 21:00 h</div>
       </div>
     </div>
   </div>
 </section>
 <div class="band"></div>
 
-<!-- ════════════ §05 PROVEEDORES ════ -->
-<section class="wrap" id="proveedores">
-  <div class="eyebrow fade-in">05 — Partners por Categoría</div>
-  <h2 class="sec-title fade-in fade-in-delay-1">Los <em>16 partners</em> del encuentro</h2>
-  <p class="body-md fade-in fade-in-delay-2">Exclusividad total por categoría. Un solo proveedor por servicio — sin competencia interna, con máxima atención al cliente y calidad garantizada.</p>
+<!-- ════════════ §05 PARTNERS — V6 EDITORIAL ════ -->
+<section id="proveedores" class="ep-ptnr-section">
 
-  <div class="prov-grid">
-    <div class="prov-card fade-in"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Alianzas & Joyería</div><div class="prov-cat">💍 Joyería nupcial</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-1"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1594552072238-b8a33785b6cd?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Moda Nupcial</div><div class="prov-cat">👗 Vestidos de novia</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-2"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1617627143233-f5f4b0c3498e?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Trajes de Novio</div><div class="prov-cat">🤵 Sastrería masculina</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-3"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Calzado Nupcial</div><div class="prov-cat">👠 Zapatos y complementos</div></div></div>
-    <div class="prov-card fade-in"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Fotografía & Video</div><div class="prov-cat">📸 Cobertura visual</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-1"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Floristería & Ramos</div><div class="prov-cat">🌿 Floral design</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-2"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Decoración</div><div class="prov-cat">✦ Ambientación y styling</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-3"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Tarta Nupcial</div><div class="prov-cat">🎂 Pastelería artesanal</div></div></div>
-    <div class="prov-card fade-in"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Música & DJ</div><div class="prov-cat">🎵 Entertainment sonoro</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-1"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Cócteles & Bebidas</div><div class="prov-cat">🥂 Open bar & mixología</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-2"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1578632292335-df3abbb0d586?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Invitaciones</div><div class="prov-cat">✉ Papelería nupcial</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-3"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Recuerdos</div><div class="prov-cat">🎁 Detalles & regalos</div></div></div>
-    <div class="prov-card fade-in"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Belleza & Estilismo</div><div class="prov-cat">💄 Hair & makeup</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-1"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Coches & Transporte</div><div class="prov-cat">🚘 Vehículos de lujo</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-2"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Viaje de Novios</div><div class="prov-cat">✈ Luna de miel & viajes</div></div></div>
-    <div class="prov-card fade-in fade-in-delay-3"><div class="prov-photo" style="background-image:url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=500&q=80');"></div><div class="prov-ov"></div><div class="prov-body"><div class="prov-nm">Entretenimiento</div><div class="prov-cat">🎪 Shows & espectáculos</div></div></div>
-  </div>
+  <!-- EP watermark decoration -->
+  <div class="ep-ptnr-wm" aria-hidden="true">EP</div>
 
-  <div style="background:var(--navy);padding:28px 36px;display:flex;justify-content:space-between;align-items:center;margin-top:2px;" class="fade-in">
-    <div>
-      <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(250,246,238,0.32);font-weight:400;">Exclusividad total por categoría</div>
-      <div style="font-size:11px;color:rgba(250,246,238,0.22);margin-top:3px;">16 partners · 1 proveedor por categoría · sin competencia interna</div>
+  <!-- ── Editorial Header ── -->
+  <div class="ep-ptnr-hd fade-in">
+    <div class="ep-ptnr-hd-l">
+      <span class="ep-ptnr-ey">05 — Partners por Categoría</span>
+      <h2 class="ep-ptnr-tt">Los <em>16 partners</em><br>del encuentro</h2>
     </div>
-    <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold2);letter-spacing:2px;text-transform:uppercase;">BCN Encuentro Prenupcial</div>
+    <div class="ep-ptnr-hd-r">
+      <p class="ep-ptnr-intro">Cada categoría ha sido seleccionada con criterio curatorial. Un solo proveedor por ámbito, sin competencia interna — para que cada familia encuentre exactamente lo que necesita para su boda, en un entorno exclusivo y bien producido.</p>
+      <div class="ep-ptnr-badge">
+        <span>16 categorías</span>
+        <span class="ep-ptnr-sep">·</span>
+        <span>1 partner por categoría</span>
+        <span class="ep-ptnr-sep">·</span>
+        <span>exclusividad total</span>
+      </div>
+    </div>
   </div>
-  <p class="body-md fade-in" style="margin-top:22px;">Las cuotas de participación son orientativas y negociables. Los partners que patrocinen momentos específicos del evento — desfile, cóctel de bienvenida, cierre musical — abonan una tarifa adicional de patrocinio sobre la base del stand.</p>
+
+  <!-- ── Mosaic Grid ── -->
+  <div class="ep-grid">
+
+    <!-- 01 featured 2×2 -->
+    <div class="ep-card fade-in">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-01-joyeria.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">01</span>
+        <span class="ep-card-nm">Joyería y alianzas</span>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div class="ep-card fade-in fade-in-delay-1">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-02-vestidos.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">02</span>
+        <span class="ep-card-nm">Vestidos de Novia</span>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="ep-card fade-in fade-in-delay-2">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-03-trajes.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">03</span>
+        <span class="ep-card-nm">Trajes y Etiqueta</span>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div class="ep-card fade-in">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-04-fotografia.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">04</span>
+        <span class="ep-card-nm">Fotografía y Video</span>
+      </div>
+    </div>
+
+    <!-- 05 -->
+    <div class="ep-card fade-in fade-in-delay-1">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-05-floral.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">05</span>
+        <span class="ep-card-nm">Decoración Floral</span>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div class="ep-card fade-in fade-in-delay-2">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-06-musica.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">06</span>
+        <span class="ep-card-nm">Música y Entretenimiento</span>
+      </div>
+    </div>
+
+    <!-- 07 -->
+    <div class="ep-card fade-in">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-07-belleza.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">07</span>
+        <span class="ep-card-nm">Belleza y Styling</span>
+      </div>
+    </div>
+
+    <!-- 08 -->
+    <div class="ep-card fade-in fade-in-delay-1">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-08-invitaciones.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">08</span>
+        <span class="ep-card-nm">Invitaciones y Papelería</span>
+      </div>
+    </div>
+
+    <!-- 09 -->
+    <div class="ep-card fade-in fade-in-delay-2">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-09-coches.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">09</span>
+        <span class="ep-card-nm">Coches y Transporte</span>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="ep-card fade-in">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-10-viajes.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">10</span>
+        <span class="ep-card-nm">Viajes de Novios</span>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="ep-card fade-in fade-in-delay-1">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-11-reposteria.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">11</span>
+        <span class="ep-card-nm">Repostería y Tartas</span>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="ep-card fade-in fade-in-delay-2">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-12-detalles.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">12</span>
+        <span class="ep-card-nm">Detalles y Regalos</span>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="ep-card fade-in">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-13-iluminacion.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">13</span>
+        <span class="ep-card-nm">Iluminación y Ambientación</span>
+      </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="ep-card fade-in fade-in-delay-1">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-14-calzado.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">14</span>
+        <span class="ep-card-nm">Calzado Nupcial</span>
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="ep-card fade-in fade-in-delay-2">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-15-complementos.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">15</span>
+        <span class="ep-card-nm">Complementos para Novias</span>
+      </div>
+    </div>
+
+    <!-- 16 -->
+    <div class="ep-card fade-in fade-in-delay-3">
+      <div class="ep-card-img" style="background-image:url('assets/images/gen-16-djs.png');"></div>
+      <div class="ep-card-wash"></div>
+      <div class="ep-card-body">
+        <span class="ep-card-num">16</span>
+        <span class="ep-card-nm">DJ&apos;s y Shows</span>
+      </div>
+    </div>
+
+  </div><!-- /.ep-grid -->
+
+  <!-- ── Footer strip ── -->
+  <div class="ep-ptnr-foot fade-in">
+    <div class="ep-ptnr-foot-inner">
+      <div>
+        <div class="ep-ptnr-foot-lbl">Exclusividad total por categoría</div>
+        <div class="ep-ptnr-foot-sub">16 partners &nbsp;·&nbsp; 1 proveedor por categoría &nbsp;·&nbsp; sin competencia interna</div>
+      </div>
+      <div class="ep-ptnr-foot-brand">BCN Encuentro Prenupcial</div>
+    </div>
+  </div>
+
 </section>
 <div class="band"></div>
 
@@ -331,22 +552,34 @@
     <p class="body-md fade-in fade-in-delay-2">Simulación orientativa basada en modelo conservador. El objetivo es evaluar la rentabilidad antes de comprometer recursos. Cifras por edición y proyección anual.</p>
     <div class="fin-grid" style="margin-top:36px;">
       <div class="fin-card fade-in">
-        <div class="fin-card-title">Ingresos por edición</div>
-        <div class="fin-row"><span class="fin-row-label">16 stands de partners</span><span class="fin-row-val pos">A consultar</span></div>
-        <div class="fin-row"><span class="fin-row-label">Patrocinio showroom (marca nupcial)</span><span class="fin-row-val pos">A consultar</span></div>
-        <div class="fin-row"><span class="fin-row-label">Patrocinio cierre musical</span><span class="fin-row-val pos">A consultar</span></div>
-        <div class="fin-row"><span class="fin-row-label">Fee de producción al recinto</span><span class="fin-row-val pos">A consultar</span></div>
-        <div class="fin-row total-row"><span class="fin-row-label" style="font-weight:500;color:var(--text);">Total ingresos brutos</span><span class="fin-row-val" style="color:var(--gold3);font-size:18px;">Propuesta personalizada</span></div>
+        <div class="fin-card-title">Ingresos del recinto anfitrión</div>
+        <div style="font-size:10px;color:var(--terra);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;font-weight:500;">Degustación para 150–200 asistentes</div>
+        <div class="fin-row"><span class="fin-row-label">Menú degustación</span><span class="fin-row-val pos">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Tarta nupcial de exhibición</span><span class="fin-row-val pos">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Bebidas &amp; vinos mesa</span><span class="fin-row-val pos">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Cóctel de bienvenida</span><span class="fin-row-val pos">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Cava de honor al cierre</span><span class="fin-row-val pos">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Cena cierre del evento</span><span class="fin-row-val pos">A consultar</span></div>
+        <div class="fin-row total-row"><span class="fin-row-label" style="font-weight:500;color:var(--text);">Total ingresos recinto</span><span class="fin-row-val" style="color:var(--gold3);font-size:18px;">Propuesta personalizada</span></div>
       </div>
       <div class="fin-card fade-in fade-in-delay-1">
-        <div class="fin-card-title">Costes estimados por edición</div>
-        <div class="fin-row"><span class="fin-row-label">MC + 4 asistentes (equipo)</span><span class="fin-row-val neg">A consultar</span></div>
-        <div class="fin-row"><span class="fin-row-label">Producción del desfile nupcial</span><span class="fin-row-val neg">A consultar</span></div>
-        <div class="fin-row"><span class="fin-row-label">Grupo musical de cierre</span><span class="fin-row-val neg">A consultar</span></div>
-        <div class="fin-row"><span class="fin-row-label">Diseño, comunicación y difusión</span><span class="fin-row-val neg">A consultar</span></div>
-        <div class="fin-row"><span class="fin-row-label">Material de producción (stands)</span><span class="fin-row-val neg">A consultar</span></div>
-        <div class="fin-row"><span class="fin-row-label">Seguros, varios e imprevistos</span><span class="fin-row-val neg">A consultar</span></div>
-        <div class="fin-row total-row"><span class="fin-row-label" style="font-weight:500;color:var(--text);">Total costes estimados</span><span class="fin-row-val" style="color:var(--terra);font-size:18px;">Propuesta personalizada</span></div>
+        <div class="fin-card-title">Costes de producción BCN EP</div>
+        <div style="font-size:10px;color:var(--terra);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;font-weight:500;">Aportados por BCN Encuentro Prenupcial</div>
+        <div class="fin-row"><span class="fin-row-label">MC (talento externo)</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Equipo BCN EP (Dirección + 6)</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">20 modelos (femeninas, masculinos, niños)</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Maquilladores &amp; peluqueros</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Coreógrafa &amp; dirección artística</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Decoración pasarela</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Grupo musical en directo</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">DJs</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Traslados de modelos y equipo</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Material para stands</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Sonido e iluminación</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Diseño &amp; comunicación</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Seguros &amp; varios</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row"><span class="fin-row-label">Fotógrafo &amp; videomaker</span><span class="fin-row-val neg">A consultar</span></div>
+        <div class="fin-row total-row"><span class="fin-row-label" style="font-weight:500;color:var(--text);">Total costes BCN EP</span><span class="fin-row-val" style="color:var(--terra);font-size:18px;">Propuesta personalizada</span></div>
       </div>
     </div>
     <div class="kpi-strip fade-in">
@@ -356,7 +589,7 @@
       <div class="kpi"><div class="kpi-v">Alto</div><div class="kpi-l">Margen neto anual</div></div>
       <div class="kpi"><div class="kpi-v">2ª ed.</div><div class="kpi-l">Punto de equilibrio</div></div>
     </div>
-    <p class="body-md fade-in" style="margin-top:24px;">* Cifras orientativas disponibles bajo NDA o propuesta personalizada. El modelo es escalable: con 3 recintos activos y 4 ediciones anuales, los márgenes se multiplican significativamente con potencial de franquicia desde la 3ª edición.</p>
+    <p class="body-md fade-in" style="margin-top:24px;">* Cifras orientativas disponibles bajo NDA o propuesta personalizada.</p>
   </div>
 </section>
 <div class="band"></div>
@@ -366,15 +599,47 @@
   <div class="eyebrow fade-in">07 — Metodología de Producción</div>
   <h2 class="sec-title fade-in fade-in-delay-1">Cómo se <em>produce</em></h2>
   <p class="body-md fade-in fade-in-delay-2">El Encuentro Prenupcial sigue un ciclo estándar de 10 semanas desde la confirmación del recinto. La metodología está diseñada para ser replicable sin pérdida de calidad.</p>
-  <div class="tl-wrap">
-    <div class="tl-spine"></div>
+
+  <!-- ── V6 EDITORIAL SCAFFOLD — met-* (Phase 02A) ── -->
+  <div class="met-layout">
+    <div class="met-main">
+      <div class="tl-wrap">
+        <div class="tl-spine"></div>
     <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-week">Semanas 1–2 · Acuerdo base</div><div class="tl-title">Contrato con el recinto anfitrión</div><p class="tl-desc">Reunión de presentación, alineación del concepto y firma del acuerdo. Se define la fecha, el espacio disponible, el fee de producción y el modelo de ingresos compartidos.</p><div class="tl-sub"><div class="tl-si">Definición del modelo de ingresos compartidos</div><div class="tl-si">Acuerdo sobre capacidad máxima de asistentes</div><div class="tl-si">Compromiso de convocatoria de parejas por parte del recinto</div></div></div>
     <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-week">Semanas 3–4 · Partners</div><div class="tl-title">Selección y contratación de 16 partners</div><p class="tl-desc">Captación de las 16 categorías. Presentación del dossier, propuesta de participación y firma de contratos individuales. Se garantiza exclusividad por categoría.</p><div class="tl-sub"><div class="tl-si">Briefing de stand y materiales necesarios</div><div class="tl-si">Definición de ventajas exclusivas para contratación en el evento</div><div class="tl-si">Confirmación de participación en el desfile (si aplica)</div></div></div>
-    <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-week">Semanas 5–6 · Convocatoria</div><div class="tl-title">Captación y confirmación de parejas</div><p class="tl-desc">El recinto convoca a sus parejas confirmadas o en fase avanzada. BCN EP Studio proporciona todos los materiales: invitación personalizada, email de confirmación y dossier de bienvenida.</p><div class="tl-sub"><div class="tl-si">Objetivo mínimo: 8 parejas (máximo recomendado: 10)</div><div class="tl-si">Confirmación de familias acompañantes para ajustar aforo</div><div class="tl-si">Envío de agenda del día a los asistentes confirmados</div></div></div>
-    <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-week">Semanas 7–8 · Producción artística</div><div class="tl-title">Showroom y producción del desfile</div><p class="tl-desc">Casting de 10 modelos femeninas + 2 masculinos + modelos infantiles, selección de 20+ vestidos, trajes y complementos. Diseño de coreografía y guion del MC.</p><div class="tl-sub"><div class="tl-si">Ensayo general 48 h antes del evento</div><div class="tl-si">Configuración técnica: pasarela, sonido, iluminación</div></div></div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-week">Semanas 5–6 · Convocatoria</div><div class="tl-title">Captación y confirmación de parejas</div><p class="tl-desc">El recinto convoca a sus parejas confirmadas o en fase avanzada. BCN EP Studio proporciona todos los materiales: invitación personalizada, email de confirmación, Google Form de inscripción y dossier de bienvenida.</p><div class="tl-sub"><div class="tl-si">Mínimo 8 parejas, ideal 10 o +</div><div class="tl-si">Confirmación de familias acompañantes para ajustar aforo</div><div class="tl-si">Envío de agenda del día a los asistentes confirmados</div></div></div>
+    <div class="tl-item fade-in"><div class="tl-dot"></div><div class="tl-week">Semanas 7–8 · Producción artística</div><div class="tl-title">Showroom y producción del desfile</div><p class="tl-desc">Casting de 12 modelos femeninas + 4 masculinos + 4 niños, selección de 20+ vestidos, trajes y complementos. Diseño de coreografía y guión del MC.</p><div class="tl-sub"><div class="tl-si">Ensayo general 3 horas antes del evento — 12h</div><div class="tl-si">Configuración técnica: pasarela, sonido, iluminación</div></div></div>
     <div class="tl-item fade-in"><div class="tl-dot h"></div><div class="tl-week">Semana 9 · Comunicación</div><div class="tl-title">Materiales, redes y difusión</div><p class="tl-desc">Producción de contenidos digitales para redes sociales del recinto y proveedores. Diseño del programa del día, señalética, credenciales y kits de bienvenida para asistentes.</p></div>
     <div class="tl-item fade-in"><div class="tl-dot h"></div><div class="tl-week">Semana 10 · Día de evento</div><div class="tl-title">Ejecución, cierre y resultados</div><p class="tl-desc">Montaje el día anterior. Ejecución por el equipo completo. Al cierre: recopilación de contratos firmados, contactos generados, NPS de asistentes y valoración de proveedores.</p></div>
-  </div>
+      </div><!-- /.tl-wrap -->
+    </div><!-- /.met-main -->
+    <aside class="met-sidebar">
+      <div class="met-sidebar-inner">
+        <div class="met-img-stack">
+          <div class="met-img-item">
+            <img src="assets/images/sec07-1.png" alt="Metodología de producción — 1" loading="lazy">
+          </div>
+          <div class="met-img-item">
+            <img src="assets/images/sec07-2.png" alt="Metodología de producción — 2" loading="lazy">
+          </div>
+          <div class="met-img-item">
+            <img src="assets/images/sec07-3.png" alt="Metodología de producción — 3" loading="lazy">
+          </div>
+          <div class="met-img-item">
+            <img src="assets/images/sec07-4.png" alt="Metodología de producción — 4" loading="lazy">
+          </div>
+          <div class="met-img-item">
+            <img src="assets/images/sec07-5.png" alt="Metodología de producción — 5" loading="lazy">
+          </div>
+          <div class="met-img-item">
+            <img src="assets/images/sec07-6.png" alt="Metodología de producción — 6" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div><!-- /.met-layout -->
+  <!-- ── END V6 SCAFFOLD ── -->
+
 </section>
 <div class="band"></div>
 
@@ -383,71 +648,135 @@
   <div class="inner">
     <div class="eyebrow lt fade-in">08 — Equipo de Trabajo</div>
     <h2 class="sec-title lt fade-in fade-in-delay-1">Las personas que hacen <em>posible</em> el encuentro</h2>
-    <p class="body-md fade-in fade-in-delay-2" style="color:rgba(250,246,238,0.5);">Un equipo de cinco perfiles especializados — liderado por el Maestro de Ceremonias — garantiza que cada momento del evento se viva con la calidad y el cuidado que el concepto exige.</p>
+    <p class="body-md fade-in fade-in-delay-2" style="color:rgba(250,246,238,0.5);">Un equipo interno de seis perfiles especializados, junto a talento externo cuidadosamente seleccionado, garantiza que cada momento del evento se viva con la calidad y el cuidado que el concepto exige.</p>
   </div>
-  <div style="max-width:1020px;margin:44px auto 0;padding:0 48px;">
+  <div class="team-inner-wrap">
     <div class="team-grid">
-      <div class="team-card lead fade-in">
-        <img class="team-lead-photo" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="Maestro de Ceremonias" loading="lazy">
+      <div class="team-card fade-in">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Dirección y Producción" loading="lazy">
         <div class="team-body">
-          <div class="team-role">Dirección del evento</div>
-          <div class="team-name">Maestro de Ceremonias</div>
-          <p class="team-desc">Perfil con experiencia en presentación de eventos, bodas y producciones experienciales. Es la voz y el alma del encuentro. Gestiona el ritmo del programa, presenta los momentos clave, genera conexión emocional con el público y garantiza que la energía del evento nunca decaiga.</p>
-          <span class="team-badge">Perfil líder</span>
+          <div class="team-role">Dirección</div>
+          <div class="team-name">Dirección y Producción</div>
+          <p class="team-desc">Máximo responsable del evento. Coordina el equipo completo, la relación con el recinto y la ejecución de la agenda del día.</p>
+          <span class="team-badge">Equipo interno</span>
         </div>
       </div>
       <div class="team-card fade-in fade-in-delay-1">
-        <img class="team-photo" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Asistente de Producción" loading="lazy">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Asistente de Producción" loading="lazy">
         <div class="team-body">
           <div class="team-role">Operaciones</div>
-          <div class="team-name">Asistente de Producción</div>
+          <div class="team-name">Asistente de Producción 1</div>
           <p class="team-desc">Gestiona la logística del evento: montaje, control de tiempos, coordinación entre áreas y resolución de incidencias.</p>
-          <span class="team-badge">Producción</span>
+          <span class="team-badge">Equipo interno</span>
         </div>
       </div>
       <div class="team-card fade-in fade-in-delay-2">
-        <img class="team-photo" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Asistente Comercial" loading="lazy">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Asistente de Producción" loading="lazy">
+        <div class="team-body">
+          <div class="team-role">Operaciones</div>
+          <div class="team-name">Asistente de Producción 2</div>
+          <p class="team-desc">Apoyo en logística, atención a proveedores durante el evento y coordinación de tiempos en pista.</p>
+          <span class="team-badge">Equipo interno</span>
+        </div>
+      </div>
+      <div class="team-card fade-in">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80" alt="Asistente Comercial" loading="lazy">
         <div class="team-body">
           <div class="team-role">Atención a novios</div>
           <div class="team-name">Asistente Comercial</div>
-          <p class="team-desc">Acompaña a las parejas en el recorrido por stands. Facilita reuniones con providers y gestiona el seguimiento post-evento.</p>
-          <span class="team-badge">Novios</span>
+          <p class="team-desc">Acompaña a las parejas en el recorrido por stands. Facilita reuniones con partners y gestiona el seguimiento post-evento.</p>
+          <span class="team-badge">Equipo interno</span>
         </div>
       </div>
-      <div class="team-card fade-in fade-in-delay-3">
-        <img class="team-photo" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80" alt="Directora de Desfile" loading="lazy">
+      <div class="team-card fade-in fade-in-delay-1">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80" alt="Directora de Desfile" loading="lazy">
         <div class="team-body">
           <div class="team-role">Producción artística</div>
           <div class="team-name">Directora de Desfile</div>
           <p class="team-desc">Coordina modelos, tiempos del showroom y dirección artística del desfile. Garantiza un momento visualmente impecable.</p>
-          <span class="team-badge">Showroom</span>
+          <span class="team-badge">Equipo interno</span>
         </div>
       </div>
-      <div class="team-card fade-in fade-in-delay-1">
-        <img class="team-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Asistente Digital" loading="lazy">
+      <div class="team-card fade-in fade-in-delay-2">
+        <img class="team-photo" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80" alt="Asistente de Pasarela" loading="lazy">
         <div class="team-body">
-          <div class="team-role">Contenido digital</div>
-          <div class="team-name">Asistente Digital</div>
-          <p class="team-desc">Documenta en foto y vídeo. Produce contenido para redes en tiempo real y entrega material a recinto y partners en 48 h.</p>
-          <span class="team-badge">Digital</span>
+          <div class="team-role">Pasarela</div>
+          <div class="team-name">Asistente de Pasarela</div>
+          <p class="team-desc">Apoyo directo a la Directora de Desfile. Gestiona vestuario, cambios rápidos y posicionamiento de modelos en pista.</p>
+          <span class="team-badge">Equipo interno</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding:24px 28px;background:rgba(201,162,96,0.05);border:1px solid rgba(201,162,96,0.12);" class="fade-in">
+      <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(201,162,96,0.5);font-weight:400;margin-bottom:16px;">Talento externo por edición</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(250,246,238,0.03);border:1px solid rgba(250,246,238,0.08);">
+          <span style="font-size:13px;color:var(--gold2);font-family:'Cormorant Garamond',serif;">Maestro de Ceremonias</span>
+          <span style="font-size:10px;color:rgba(250,246,238,0.3);letter-spacing:1px;">VOZ DEL EVENTO</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(250,246,238,0.03);border:1px solid rgba(250,246,238,0.08);">
+          <span style="font-size:13px;color:var(--gold2);font-family:'Cormorant Garamond',serif;">DJs</span>
+          <span style="font-size:10px;color:rgba(250,246,238,0.3);letter-spacing:1px;">MÚSICA &amp; CIERRE</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;padding:12px 18px;background:rgba(250,246,238,0.03);border:1px solid rgba(250,246,238,0.08);">
+          <span style="font-size:13px;color:var(--gold2);font-family:'Cormorant Garamond',serif;">Grupo musical en directo</span>
+          <span style="font-size:10px;color:rgba(250,246,238,0.3);letter-spacing:1px;">APERTURA &amp; DESFILE</span>
         </div>
       </div>
     </div>
     <div style="margin-top:36px;background:rgba(201,162,96,0.05);padding:28px;text-align:center;border-top:1px solid rgba(201,162,96,0.12);" class="fade-in">
       <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(201,162,96,0.4);font-weight:400;margin-bottom:20px;">Estructura de coordinación el día del evento</div>
       <div style="display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;">
-        <div style="background:rgba(201,162,96,0.14);border:1px solid rgba(201,162,96,0.3);padding:10px 20px;font-size:12px;color:var(--gold2);">MC · Director</div>
+        <div style="background:rgba(201,162,96,0.14);border:1px solid rgba(201,162,96,0.3);padding:10px 20px;font-size:12px;color:var(--gold2);">Dirección y Producción</div>
         <div style="color:rgba(201,162,96,0.4);font-size:18px;">→</div>
         <div style="display:flex;gap:3px;flex-wrap:wrap;justify-content:center;">
-          <div style="background:rgba(250,246,238,0.03);padding:8px 14px;font-size:11px;color:rgba(250,246,238,0.36);border:1px solid rgba(250,246,238,0.06);">Producción</div>
-          <div style="background:rgba(250,246,238,0.03);padding:8px 14px;font-size:11px;color:rgba(250,246,238,0.36);border:1px solid rgba(250,246,238,0.06);">Novios</div>
-          <div style="background:rgba(250,246,238,0.03);padding:8px 14px;font-size:11px;color:rgba(250,246,238,0.36);border:1px solid rgba(250,246,238,0.06);">Desfile</div>
-          <div style="background:rgba(250,246,238,0.03);padding:8px 14px;font-size:11px;color:rgba(250,246,238,0.36);border:1px solid rgba(250,246,238,0.06);">Digital</div>
+          <div style="background:rgba(250,246,238,0.05);padding:8px 14px;font-size:11px;color:rgba(250,246,238,0.55);border:1px solid rgba(250,246,238,0.10);">Producción ×2</div>
+          <div style="background:rgba(250,246,238,0.05);padding:8px 14px;font-size:11px;color:rgba(250,246,238,0.55);border:1px solid rgba(250,246,238,0.10);">Comercial</div>
+          <div style="background:rgba(250,246,238,0.05);padding:8px 14px;font-size:11px;color:rgba(250,246,238,0.55);border:1px solid rgba(250,246,238,0.10);">Desfile</div>
+          <div style="background:rgba(250,246,238,0.05);padding:8px 14px;font-size:11px;color:rgba(250,246,238,0.55);border:1px solid rgba(250,246,238,0.10);">Pasarela</div>
         </div>
       </div>
-      <div style="margin-top:14px;font-size:11px;color:rgba(250,246,238,0.22);">+ Equipo técnico del recinto: sonido, iluminación y catering</div>
+      <div style="margin-top:14px;font-size:11px;color:rgba(250,246,238,0.45);">+ MC (externo) &nbsp;·&nbsp; DJs &nbsp;·&nbsp; Equipo técnico del recinto: sonido, iluminación y catering</div>
     </div>
   </div>
+
+  <!-- ── CONTACT EXTENSION ── -->
+  <div id="contacto" class="eq-contact-ext fade-in">
+    <div class="eq-contact-inner">
+
+      <div class="eq-contact-phrase">
+        <div class="eq-contact-eyebrow">Contacto</div>
+        <h3 class="eq-contact-heading">Cada gran boda<br><em>empieza aquí</em></h3>
+        <p class="eq-contact-sub">Conversemos sobre cómo llevar el Encuentro Prenupcial a tu recinto. Estamos listos para acompañarte desde el primer momento.</p>
+      </div>
+
+      <div class="eq-contact-info">
+        <div class="eq-ci-block">
+          <div class="eq-ci-label">Teléfono</div>
+          <div class="eq-ci-value">93 180 11 16</div>
+          <div class="eq-ci-value">640 19 10 73</div>
+        </div>
+        <div class="eq-ci-block">
+          <div class="eq-ci-label">Email</div>
+          <a href="mailto:info@bcncasting.es" class="eq-ci-value eq-ci-link">info@bcncasting.es</a>
+        </div>
+        <div class="eq-ci-block">
+          <div class="eq-ci-label">Dirección</div>
+          <div class="eq-ci-value">Carrer del Misser Ferrer 1, Bajo 2</div>
+          <div class="eq-ci-value-muted">Ciutat Vella, 08002, Barcelona</div>
+        </div>
+        <div class="eq-ci-block">
+          <div class="eq-ci-label">Horario</div>
+          <div class="eq-ci-value">Lunes a Domingo</div>
+          <div class="eq-ci-value-muted">09:00 AM — 22:00 PM</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="eq-contact-rule"></div>
+  </div>
+  <!-- ── END CONTACT EXTENSION ── -->
+
 </section>
 <div class="band"></div>
 
@@ -463,7 +792,7 @@
     <div class="impact-card fade-in fade-in-delay-1"><div class="impact-actor">El proyecto global</div><ul class="impact-list"><li>Modelo replicable: 1 formato → múltiples recintos y ciudades</li><li>Escalabilidad sin pérdida de calidad gracias al protocolo</li><li>Comunidad de partners nupciales que crece con el proyecto</li><li>Potencial de licencia o franquicia a partir de la 3ª edición</li></ul></div>
   </div>
   <div class="conv-strip">
-    <div class="conv-item fade-in"><div class="conv-val">60+</div><div class="conv-lbl">Asistentes directos por edición</div></div>
+    <div class="conv-item fade-in"><div class="conv-val">200+</div><div class="conv-lbl">Asistentes directos por edición</div></div>
     <div class="conv-item fade-in fade-in-delay-1"><div class="conv-val">35%</div><div class="conv-lbl">Tasa conversión estimada / proveedor</div></div>
     <div class="conv-item fade-in fade-in-delay-2"><div class="conv-val">85+</div><div class="conv-lbl">NPS objetivo de satisfacción</div></div>
     <div class="conv-item fade-in fade-in-delay-3"><div class="conv-val">×4</div><div class="conv-lbl">ROI estimado para partners</div></div>
@@ -495,8 +824,8 @@
       <div class="fade-in fade-in-delay-1">
         <blockquote style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--ivory);line-height:1.45;border-left:2px solid var(--gold);padding-left:24px;margin-bottom:36px;font-weight:300;">"No competimos con las ferias. Existimos donde ellas no pueden llegar: dentro del recinto, con aforo exclusivo, con emoción real."</blockquote>
         <div class="pos-pillars">
-          <div class="pos-pillar"><div class="pos-pillar-t">Privacidad</div><p class="pos-pillar-d">Máximo 10 parejas. El formato exclusivo es irrenunciable.</p></div>
-          <div class="pos-pillar"><div class="pos-pillar-t">Emoción</div><p class="pos-pillar-d">Diseñado para sentir, no solo para ver o comprar.</p></div>
+          <div class="pos-pillar"><div class="pos-pillar-t">Privacidad</div><p class="pos-pillar-d">10 parejas o más. El formato exclusivo es irrenunciable.</p></div>
+          <div class="pos-pillar"><div class="pos-pillar-t">Emoción</div><p class="pos-pillar-d">Compartir con otras parejas y familiares la misma ilusión y emoción de esta doble celebración.</p></div>
           <div class="pos-pillar"><div class="pos-pillar-t">Conversión</div><p class="pos-pillar-d">Público cualificado con intención de compra real e inmediata.</p></div>
           <div class="pos-pillar"><div class="pos-pillar-t">Escalabilidad</div><p class="pos-pillar-d">Un protocolo replicable en cualquier recinto de España.</p></div>
         </div>
@@ -514,14 +843,11 @@
 <section class="closing">
   <div class="closing-bg"></div>
   <div style="position:relative;z-index:3;margin-bottom:48px;" aria-hidden="true">
-    <svg width="80" height="50" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 68 L20 36 Q20 8 60 8 Q100 8 100 36 L100 68" stroke="rgba(201,162,96,0.5)" stroke-width="1.5" fill="none"/>
-      <path d="M28 68 L28 38 Q28 18 60 18 Q92 18 92 38 L92 68" stroke="rgba(201,162,96,0.18)" stroke-width="0.7" fill="none"/>
-      <polygon points="60,2 64,10 60,14 56,10" fill="rgba(201,162,96,0.5)"/>
-      <line x1="12" y1="68" x2="108" y2="68" stroke="rgba(201,162,96,0.35)" stroke-width="1"/>
-      <text x="60" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="300" fill="rgba(250,246,238,0.6)" letter-spacing="4">BCN</text>
-      <line x1="12" y1="44" x2="20" y2="44" stroke="rgba(201,162,96,0.35)" stroke-width="0.8"/>
-      <line x1="100" y1="44" x2="108" y2="44" stroke="rgba(201,162,96,0.35)" stroke-width="0.8"/>
+    <svg width="120" height="62" viewBox="0 0 92 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="28" cy="24" r="20" stroke="rgba(201,162,96,0.7)" stroke-width="2.2"/>
+      <circle cx="28" cy="24" r="13" stroke="rgba(201,162,96,0.28)" stroke-width="0.7"/>
+      <circle cx="64" cy="24" r="20" stroke="rgba(201,162,96,0.7)" stroke-width="2.2"/>
+      <circle cx="64" cy="24" r="13" stroke="rgba(201,162,96,0.28)" stroke-width="0.7"/>
     </svg>
   </div>
   <div class="closing-inner">
