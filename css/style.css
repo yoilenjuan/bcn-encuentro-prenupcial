@@ -334,8 +334,8 @@ h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
   filter: drop-shadow(0 0 18px rgba(198,161,110,0.15));
 }
 .logo-wrap svg {
-  width: 156px;
-  height: 94px;
+  width: 150px;
+  height: 130px;
 }
 .logo-wm { position: absolute; top: 32px; right: 40px; z-index: 3; opacity: 0.85; }
 
@@ -940,7 +940,7 @@ h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
   .cover-cta { margin-top: 36px; font-size: 10px; }
   .cover-foot { padding: 14px 28px; }
   .cv-fi { letter-spacing: 0.22em; font-size: 9px; }
-  .logo-wrap svg { width: 120px; height: 72px; }
+  .logo-wrap svg { width: 120px; height: 104px; }
   .acts-grid, .prob-grid { grid-template-columns: 1fr; }
   .prov-grid { grid-template-columns: repeat(2, 1fr); }
   .kpi-strip { grid-template-columns: repeat(2, 1fr); }
